@@ -8,7 +8,6 @@ body {
   font-weight: 400;
   background: url("chairs.jpg") 0 0 no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
   color: white; }
 

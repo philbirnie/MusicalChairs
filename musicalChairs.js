@@ -8,8 +8,13 @@ chairs.controller('ChairController', [
         $scope.players = [
             "Charlotte",
             "Nora",
-            "Daddy",
-            "Mommy"
+            "Philip",
+            "Julie",
+            "Auntie Lauren",
+            "Pop Pop",
+            "Gigi",
+            "Uncle Cory",
+            "Keegan"
         ];
 
         $scope.currentPlayers = $scope.players.slice(0)
@@ -42,7 +47,7 @@ chairs.controller('ChairController', [
 
                 $scope.currentName = name;
 
-            }, 5000, $scope.players.length);
+            }, 2000, $scope.players.length);
         };
 
         $scope.stopGame = function() {
