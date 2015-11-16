@@ -17,6 +17,13 @@
 	<h3 ng-bind="currentName" ng-class="{'complete' : hasWinner}"></h3>
 
 	<button ng-click="toggleGame()" ng-bind="buttonAction" class="game-button"></button>
+
+	<div class="remaining-players">
+		<h5 class="remaining-players__headline">Remaining Players</h5>
+		<ul ng-repeat="(key, value) in currentPlayers">
+			<li ng-bind="value"></li>
+		</ul>
+	</div>
 </main>
 </body>
 </html>

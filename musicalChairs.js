@@ -12,6 +12,8 @@ chairs.controller('ChairController', [
             "Mommy"
         ];
 
+        $scope.currentPlayers = $scope.players.slice(0)
+
         $scope.buttonAction = "Start Game";
 
         $scope.hasWinner = false;
@@ -21,18 +23,18 @@ chairs.controller('ChairController', [
         };
 
         $scope.startGame = function() {
-            var players = $scope.players.slice(0);
+            $scope.currentPlayers = $scope.players.slice(0);
 
             $scope.buttonAction = "Stop Game";
             $scope.currentName = "Get Ready...";
             $scope.hasWinner = false;
 
             timer = $interval(function() {
-                var index = Math.floor(Math.random() * players.length);
+                var index = Math.floor(Math.random() * $scope.currentPlayers.length);
 
-                var name = players.splice(index, 1);
+                var name = $scope.currentPlayers.splice(index, 1);
 
-                if (players.length == 0) {
+                if ($scope.currentPlayers.length == 0) {
                     name += " is the winner!";
                     $scope.hasWinner = true;
                     $scope.stopGame();
