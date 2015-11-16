@@ -25,6 +25,7 @@ chairs.controller('ChairController', [
 
             $scope.buttonAction = "Stop Game";
             $scope.currentName = "Get Ready...";
+            $scope.hasWinner = false;
 
             timer = $interval(function() {
                 var index = Math.floor(Math.random() * players.length);
