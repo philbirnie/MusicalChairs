@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="chairs">
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="musicalChairs.js"></script>
+</head>
+<body ng-controller="ChairController as chairsController">
+<main>
+	<h1 class="title">Musical Chairs</h1>
+
+	<h2>Who will be the last one standing?</h2>
+
+	<h3 ng-bind="currentName" ng-class="{'complete' : hasWinner}"></h3>
+
+	<button ng-click="toggleGame()" ng-bind="buttonAction" class="game-button"></button>
+</main>
+</body>
+</html>
